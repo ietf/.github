@@ -21,4 +21,4 @@ jobs:
       uses: docker://avtodev/markdown-lint:master
       with:
         config: '.github/workflows/markdownlint.json'
-        args: 'draft-*.md'
+        args: '*.md'
