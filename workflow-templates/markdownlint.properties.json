@@ -1,0 +1,11 @@
+{
+    "name": "Lint Markdown",
+    "description": "Lint Markdown workflow template.",
+    "iconName": "markdownlint",
+    "categories": [
+        "Markdown"
+    ],
+    "filePatterns": [
+        ".*\\.md$"
+    ]
+}
