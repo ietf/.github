@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Create markdownlint.json
       run: |
-        cat <<EOF > /markdownlint.json
+        cat <<EOF > /tmp/markdownlint.json
           {
             "default": true,
             "MD029": {"style": "ordered" },
@@ -33,5 +33,5 @@ jobs:
     - name: Run markdownlint
       uses: docker://avtodev/markdown-lint:master
       with:
-        config: 'markdownlint.json'
+        config: '/tmp/markdownlint.json'
         args: '*.md'
