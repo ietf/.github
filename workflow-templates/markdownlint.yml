@@ -14,24 +14,30 @@ jobs:
   lint-changelog:
     name: Lint Markdown
     runs-on: ubuntu-latest
+
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-    - name: Create markdownlint.json
+
+    - name: Locate or create markdownlint config
       run: |
-        cat <<EOF > /tmp/markdownlint.json
-          {
-            "default": true,
-            "MD029": {"style": "ordered" },
-            "MD031": false,
-            "MD033": false,
-            "MD034": false,
-            "MD040": false,
-            "MD041": false
-          }
-        EOF
+        if [ ! -f .markdownlint.json ]; then
+          echo "Using template markdownlint config"
+          cat <<EOF > .markdownlint.json
+            {
+              "default": true,
+              "MD029": {"style": "ordered" },
+              "MD031": false,
+              "MD033": false,
+              "MD034": false,
+              "MD040": false,
+              "MD041": false
+            }
+          EOF
+        fi
+
     - name: Run markdownlint
       uses: docker://avtodev/markdown-lint:master
       with:
-        config: '/tmp/markdownlint.json'
+        config: './markdownlint.json'
         args: '*.md'
