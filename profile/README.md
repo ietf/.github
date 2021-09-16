@@ -11,6 +11,5 @@ These other GitHub organizations are affiliated with the IETF, among others:
 - [IETF Tools Team](https://github.com/ietf-tools/)
 - [IETF Hackathon](https://github.com/IETF-Hackathon)
 - [IETF Administration LLC](https://github.com/ietf-llc)
-- [IETF Secretariat](https://github.com/ietf-secretariat)
 - [Internet Architecture Board (IAB)](https://github.com/intarchboard)
 - [RFC Editor](https://github.com/rfc-editor)
