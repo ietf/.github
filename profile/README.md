@@ -6,7 +6,7 @@ the way people design, use, and manage the Internet.
 
 [**Participating in the IETF is free and open!**](https://www.ietf.org/about/participate/)
 
-These other GitHub organizations are affiliated with the IEtf:
+These other GitHub organizations are affiliated with the IETF:
 
 - [Internet Architecture Board (IAB)](https://github.com/intarchboard)
 - [IETF Administration LLC](https://github.com/ietf-llc)
