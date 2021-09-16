@@ -2,13 +2,7 @@ name: "Lint Markdown"
 
 on:
   push:
-    paths-ignore:
-    - .*
-    - LICENSE.md
   pull_request:
-    paths-ignore:
-    - .*
-    - LICENSE.md
 
 jobs:
   lint-changelog:
@@ -40,4 +34,4 @@ jobs:
       uses: docker://avtodev/markdown-lint:master
       with:
         config: './markdownlint.json'
-        args: '*.md'
+        args: '**.md'
